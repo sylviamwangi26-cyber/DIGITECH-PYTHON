@@ -17,11 +17,15 @@
 
 
 def get_access():
-    name = input("Enter your name: ")
-    age = int(input("Enter your age: "))
+    try:
+        name = input("Enter your name: ")
+        age = int(input("Enter your age: "))
 
-    if age<=17:
-        return f"{name},you are allowed to go in!!"
-    else:
-        print(f"{name},you are not allowed to go in!!")
+        if age<=17:
+            return f"{name},you are allowed to go in!!"
+        else:
+            print(f"{name},you are not allowed to go in!!")
+    except ValueError:
+        print("weka number usieke maneno")
+
 get_access()
